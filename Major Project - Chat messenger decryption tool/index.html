@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat messenger decryption tool</title>
+
+        <!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+		
+        
+        <!-- Font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >     <!--This link usage - to display icon, Wiy=thout it icon will not display-->
+		
+		<!-- CSS -->
+		<link rel="stylesheet"  href="Project.css">
+
+
+		<!--For emoji icon-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	
+	</head>                                                                             <!--End of head tag-->
+
+	<style>
+		.input-group .fas {
+			font-size: 20px;                                                            /*Styling camera and setting icon*/
+		    color: white;
+			margin-left: 2px;
+			margin-right: 4px;
+			display: flex;
+			align-items: center;
+
+		}
+
+		.input-group .fa-camera {
+        margin-bottom: 4px;                                                            /* Pushing the camera icon to the bottom */
+        }
+
+        .input-group .fa-ellipsis-v {
+        margin-top: 7px;                                                               /* Pushing the settings icon to the bottom */
+        margin-left: 5px;
+	    }
+
+        .input-group-text.search_btn {                                                 /* Styling search icon */                        
+        margin-right: 8px;                                                             
+        }
+
+        .dropdown {                                                                    /* Styling drop-down */
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+       .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+       .dropdown-content a:hover {
+        background-color: rgba(109, 216, 234, 0.67);
+        }
+
+       .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+
+		
+
+	</style>
+
+    <body>
+
+		
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card"> 
+					<div class="card-header">                                                         <!--Usage-to display something at the top of the card-->
+						<div class="logo"> <b> Chat messenger </b> </div>
+						
+							    
+						                  
+								
+							<div class="input-group">
+								<input type="text" placeholder="Search..." name="" class="form-control search">
+								<div class="input-group-prepend">            
+									<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+									
+                                </div>
+
+								<i class="fas fa-camera"></i>
+								<div class="dropdown">
+									<i class="fas fa-ellipsis-v" id="settings"></i>
+									<div class="dropdown-content" id="settings-box">
+										<a href="#">New group</a>
+										<a href="#">New broadcast</a>
+										<a href="#">Linked devices</a>
+										<a href="#">Starred messages</a>
+										<a href="#">Settings</a>
+									</div>
+								</div>
+
+							</div>
+											
+					
+					</div>                                                                           <!--End of div class = card-header tag : all done till here -->
+
+
+
+
+
+
+                    <!--2nd PART-->
+					
+					<ul class="tabs">
+
+						<li> <i class="material-icons"> &#xe7ef; </i> </li>
+						<li> Chats <span class="num"> 4 </span> </li>
+						<li> Updates </li>
+						<li> Calls </li>
+
+					</ul>
+
+
+
+					
+
+                    <!--3rd PART-->
+
+                    <div class="card-body contacts_body">                                          <!--Left hand section like on whatsapp-->
+
+						<ui class="contacts">                                                      <!--ul,li tag to list contacts of persons-->
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="Dp - Copy/Screenshot (5188).png" class="rounded-circle user_img">           <!--give img url of my friends-->
+									<span class="online_icon"></span>
+								</div>
+
+                                
+								<div class="user_info">
+									<span>Vishruti</span>
+									<p class>Online</p>
+								</div>
+							</div>
+						</li>
+
+
+                        <li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont"> 
+									<img src="Dp - Copy/Screenshot (5189).png" class="rounded-circle user_img">           <!--give img url of my friends-->  
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Neha Sindhu</span>
+									<p>Last seen 12mins ago</p>
+								</div>
+							</div>
+						</li>
+
+
+
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="Dp - Copy/Screenshot (5193).png" class="rounded-circle user_img">            <!--give img url of myself-->
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Ishita kapoor</span>
+									<p>Online</p>
+								</div>
+							</div>
+						</li>
+
+
+                        <li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="Dp - Copy/Screenshot (5190).png" class="rounded-circle user_img">            <!--give img url of my friends-->
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Tanishi Mukherji</span>
+									<p>Last seen 30mins ago</p>
+								</div>
+							</div>
+						</li>
+
+
+
+                        <li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="Dp - Copy/Screenshot (5191).png" class="rounded-circle user_img">            <!--give img url of my friends-->
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Sania</span>
+									<p>Last seen 1hr ago</p>
+								</div>
+							</div>
+						</li>
+
+
+                        </ui>
+
+
+                    </div>                                                                             <!--end of div class=card-body contacts_body-->
+   
+	 			</div>
+
+            </div>   
+			
+		
+			
+
+            <!--4th PART-->
+
+			<div class="col-md-4 col-xl-3 chat">                                                      <!--Creating RHS-->
+                <div class="card mb-sm-3 mb-md-0 contacts_card" id="contact-details-card"> 
+                    <div class="card-header" id="contact-header">
+						<div class="d-flex bd-highlight">
+							
+							
+							<div class="video_cam">                                                   <!--Video and phone icon inside class=video_cam-->
+								<span><i class="fas fa-video"></i></span>                             <!--Video icon-->
+								<span><i class="fas fa-phone"></i></span>                             <!--Phone icon-->
+							</div>
+						</div>  
+					</div>
+
+
+                    <div class="card-body" id="contact-content">
+
+						<div id="messageContainer" class="card-body msg_card_body">           
+							<!-- Messages will be dynamically added here -->
+						</div>
+						
+						<div class="footer">
+							<form id="messageForm">
+								<input type="text" id="userMessage" placeholder="Type your message here">
+								<button type="submit">Send</button>
+                            </form>
+						</div>
+
+
+
+					</div>
+                </div>
+            </div>
+
+
+
+
+
+ 
+<script>                                                                       // Functionality - To show the contact which I entered in the search bar
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchInput = document.querySelector(".search");
+        var contacts = document.querySelectorAll(".contacts li");
+
+        searchInput.addEventListener("input", function () {
+            var searchText = this.value.toLowerCase();
+
+            contacts.forEach(function (contact) {
+                var contactName = contact.querySelector(".user_info span").textContent.toLowerCase();
+                if (contactName.indexOf(searchText) !== -1) {
+                    contact.classList.remove("hidden");
+                } else {
+                    contact.classList.add("hidden");
+                }
+            });
+        });
+
+    });
+</script>
+
+
+
+
+
+<script>                                                                      
+    document.addEventListener("DOMContentLoaded", function () {
+        var settingsIcon = document.getElementById("settings");
+        var settingsBox = document.getElementById("settings-box");
+
+        settingsIcon.addEventListener("click", function () {
+            settingsBox.classList.toggle("active");
+        });
+    });
+</script>
+
+
+
+
+
+<script>                                                                                //Active state show on that contact only on which I clicked
+    document.addEventListener("DOMContentLoaded", function () {
+        var contacts = document.querySelectorAll(".contacts li");
+        var contactHeader = document.getElementById("contact-header");
+
+        contacts.forEach(function(contact) {
+            contact.addEventListener("click", function() {
+                // Remove active class from all contacts
+                contacts.forEach(function(c) {
+                    c.classList.remove("active");
+                });
+
+                // Add active class to the clicked contact
+                this.classList.add("active");
+
+                var userName = this.querySelector(".user_info span").textContent;
+            var userStatus = this.querySelector(".user_info p").textContent;
+            contactHeader.innerHTML = `
+                <div class="d-flex bd-highlight">
+                    <div class="user_info">
+                        <span>${userName}</span>
+                        <p>${userStatus}</p>
+                    </div>
+                    <div class="video_cam">
+                        <span><i class="fas fa-video"></i></span>
+                        <span><i class="fas fa-phone"></i></span>
+                    </div>
+                </div>
+            `;
+
+            });
+        });
+    });
+</script>
+
+
+
+
+<script>                                                                               // Must define the decrypt function before calling the decrypt function
+function decrypt(text, shift) {
+    var decryptedText = "";
+    for (var i = 0; i < text.length; i++) {
+        var charCode = text.charCodeAt(i);
+        if (charCode >= 65 && charCode <= 90) {
+            // Uppercase letters
+            decryptedText += String.fromCharCode((charCode - 65 - shift + 26) % 26 + 65);
+        } else if (charCode >= 97 && charCode <= 122) {
+            // Lowercase letters
+            decryptedText += String.fromCharCode((charCode - 97 - shift + 26) % 26 + 97);
+        } else {
+            // Non-alphabetic characters remain unchanged
+            decryptedText += text.charAt(i);
+        }
+    }
+    return decryptedText;
+}
+
+
+</script>
+
+
+
+
+<!-- dynamically rendered msgs means that those messages will show that I will enter in the message box-->            
+
+
+<script>                                                                             //This function usage is to show the hardcoded message with the current time
+
+function getCurrentTimestamp() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+    minutes = minutes < 10 ? '0' + minutes : minutes; // Add leading zero to single digit minutes
+    var timeString = hours + ':' + minutes + ' ' + ampm;
+    return timeString;
+}
+	// Paste your JavaScript code here
+	// Sample array of messages
+	var messages = [{ content: "Khoor", sender: "Vishruti", time: getCurrentTimestamp()  }];                //This is our hardcoded message, any message we can write here
+	
+
+	// Function to dynamically render messages
+	function renderMessages() {
+		var messageContainer = document.getElementById("messageContainer");
+
+		// Clear previous content
+		messageContainer.innerHTML = "";
+
+		// Loop through messages array
+		messages.forEach(function(message) {
+			var messageDiv = document.createElement("div");
+			messageDiv.className = message.sender === "Vishruti" ? "d-flex justify-content-start mb-4" : "d-flex justify-content-end mb-4";
+
+			var messageContent = `
+				<div class="msg_cotainer">
+					${message.content}
+					<span class="msg_time">${message.time}</span>
+				</div>
+			`;
+
+
+
+
+			
+			//decrytion called
+
+			var decryptButton = document.createElement("button");
+        decryptButton.textContent = "Decrypt";
+        decryptButton.onclick = function() {
+            var decryptedMessage = decrypt(message.content, 3); // Assuming 3 is the shift value
+            alert("Decrypted message: " + decryptedMessage);
+			console.log(message.content)
+        };
+
+        // Append Decrypt button to message element
+        messageContainer.appendChild(decryptButton);
+
+			messageDiv.innerHTML = messageContent;
+			messageContainer.appendChild(messageDiv);
+		});
+	}
+
+	// Function to handle form submission
+	function handleSubmit(event) {
+		event.preventDefault();
+
+		var userMessageInput = document.getElementById("userMessage").value.trim();
+
+		if (userMessageInput !== "") {
+			var userMessage = {
+				content: userMessageInput,
+				sender: "User",
+				time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+			};
+
+			messages.push(userMessage);
+			renderMessages();
+
+			// Clear the input field
+			document.getElementById("userMessage").value = "";
+		}
+	}
+
+	// Add event listener to form submission
+	var messageForm = document.getElementById("messageForm");
+	messageForm.addEventListener("submit", handleSubmit);
+
+	// Initial render of messages
+	renderMessages();
+</script>
+
+
+
+
+
+
+
+			</div>
+			</div>
+            </body>
+            </html>
+       
